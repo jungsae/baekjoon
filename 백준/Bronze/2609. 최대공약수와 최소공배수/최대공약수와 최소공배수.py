@@ -11,8 +11,4 @@ def gcd(num1, num2):
 
 
 num1, num2 = map(int, sys.stdin.readline().split())
-result = gcd(num1, num2)
-num1 //= result
-num2 //= result
-
-print(result, num1 * num2 * result, sep="\n")
+print(gcd(num1, num2), num1 * num2 // gcd(num1, num2), sep="\n")
