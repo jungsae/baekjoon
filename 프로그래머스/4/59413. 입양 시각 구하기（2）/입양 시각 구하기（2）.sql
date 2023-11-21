@@ -1,11 +1,11 @@
 -- 코드를 입력하세요
-# select (HOUR(DATETIME)) as HOUR ,count(DATE_FORMAT(DATETIME,'%H')) as COUNT from animal_outs group by Hour order by hour;
 SELECT
     hours.Number AS HOUR,
     COALESCE(COUNT(DATE_FORMAT(o.DATETIME, '%H')), 0) AS COUNT
 FROM
     (
-        SELECT 0 AS Number UNION ALL
+        SELECT 0 AS Number 
+        UNION 
         SELECT 1 UNION ALL
         SELECT 2 UNION ALL
         SELECT 3 UNION ALL
@@ -36,4 +36,3 @@ GROUP BY
     hours.Number
 ORDER BY
     hours.Number;
-
