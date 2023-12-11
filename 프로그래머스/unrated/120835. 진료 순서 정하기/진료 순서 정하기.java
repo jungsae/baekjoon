@@ -7,7 +7,6 @@ class Solution {
             temp.add(i);
         }
         temp.sort(Collections.reverseOrder());
-        System.out.println(temp);
         for (int i = 0; i < emergency.length; i++)
         {
             emergency[i] = temp.indexOf(emergency[i])+1;
